@@ -10,7 +10,7 @@ set /p programName=Digite o nome do programa a ser desinstalado:
 set "psexecPath=C:\PSTools\PsExec.exe"  :: Substitua pelo caminho do PsExec
 
 :: Comando para localizar e desinstalar o programa no computador remoto
-set "wmicCommand=wmic product where ""name like '%%%programName%%%'" call uninstall /nointeractive"
+set "wmicCommand=wmic product where ""name='%programName%'"" call uninstall /nointeractive"
 
 :: Executa o comando remoto usando PsExec
 echo Iniciando desinstalação do programa "%programName%" no computador remoto "%remoteComputer%"...
