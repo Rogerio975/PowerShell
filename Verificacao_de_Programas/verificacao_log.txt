@@ -1,0 +1,19 @@
+Verificando programas instalados...
+
+Verificando: Google Chrome
+[✓] Google Chrome está instalado.
+
+Verificando: Mozilla Firefox
+[✓] Mozilla Firefox está instalado.
+
+Verificando: 7-Zip
+[✓] 7-Zip está instalado.
+
+Verificando: Notepad++
+[✓] Notepad++ está instalado.
+
+Verificando: Microsoft Visual C++ 2015-2019 Redistributable (x64)
+[x] Microsoft Visual C++ 2015-2019 Redistributable (x64) NÃO está instalado.
+
+Verificando: Office
+[✓] Office está instalado.
