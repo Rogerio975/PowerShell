@@ -5,7 +5,7 @@ Get-ADComputer -Filter * | ForEach-Object {
     try {
         $sessions = quser /server:$computer 2>$null
         if ($sessions -match "e144231") {
-            Write-Output "Usuário e144231 está logado em: $computer"
+            Write-Output "Usuário está logado em: $computer"
         }
     } catch {
         # Computador pode estar offline ou inacessível
