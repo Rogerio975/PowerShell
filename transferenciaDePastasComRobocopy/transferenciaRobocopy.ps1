@@ -1,10 +1,10 @@
 # --- Interface de Entrada ---
 $ComputadorOrigem  = Read-Host "Digite o nome do computador de ORIGEM"
 $Usuario           = Read-Host "Digite o nome do USUÁRIO"
-$ComputadorDestino = "SERVIDOR-BK" # Altere para o nome do seu servidor/PC de destino
+$ComputadorDestino = "emb5022609" # Altere para o nome do seu servidor/PC de destino
 
 # --- Configuração de Caminhos e Log ---
-$Origem  = "\\$ComputadorOrigem\C$\Users\$Usuario"
+$Origem  = "\\$ComputadorOrigem\C$\Users\$Usuario\downloads"
 $Destino = "\\$ComputadorDestino\C$\Backup_Migracao\$Usuario"
 $LogFile = "C:\Logs\Backup_$($Usuario)_$(Get-Date -Format 'yyyyMMdd_HHmm').log"
 
@@ -41,7 +41,7 @@ if (Test-Connection -ComputerName $ComputadorOrigem -Count 1 -Quiet) {
     # /ETA : Tempo estimado
     # /TEE : Mostra no console E grava no arquivo de log simultaneamente
     
-    robocopy "$Origem" "$Destino" /E /ZB /R:3 /W:5 /MT:32 /V /ETA /XD AppData /TEE /LOG+:"$LogFile"
+    robocopy "$Origem" "$Destino" /E /ZB /R:3 /W:5 /MT:32 /V /ETA /XF *.exe *.msi /TEE /LOG+:"$LogFile"
 
     Write-Host "`nProcesso finalizado!" -ForegroundColor Green
     Write-Host "Relatório salvo em: $LogFile" -ForegroundColor Gray
