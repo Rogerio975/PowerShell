@@ -41,7 +41,7 @@ if (Test-Connection -ComputerName $ComputadorOrigem -Count 1 -Quiet) {
     # /ETA : Tempo estimado
     # /TEE : Mostra no console E grava no arquivo de log simultaneamente
     
-    robocopy "$Origem" "$Destino" /E /ZB /R:3 /W:5 /MT:32 /V /ETA /XF *.exe *.msi /TEE /LOG+:"$LogFile"
+    robocopy "$Origem" "$Destino" /E /ZB /R:3 /W:5 /MT:32 /V /ETA /XD AppData /XF *.exe *.msi /TEE /LOG+:"$LogFile"
 
     Write-Host "`nProcesso finalizado!" -ForegroundColor Green
     Write-Host "Relatório salvo em: $LogFile" -ForegroundColor Gray
