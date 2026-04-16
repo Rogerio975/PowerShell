@@ -4,7 +4,7 @@ $Usuario           = Read-Host "Digite o nome do USUÁRIO"
 $ComputadorDestino = "emb5022609" # Altere para o nome do seu servidor/PC de destino
 
 # --- Configuração de Caminhos e Log ---
-$Origem  = "\\$ComputadorOrigem\C$\Users\$Usuario\downloads"
+$Origem  = "\\$ComputadorOrigem\C$\Users\$Usuario"
 $Destino = "\\$ComputadorDestino\C$\Backup_Migracao\$Usuario"
 $LogFile = "C:\Logs\Backup_$($Usuario)_$(Get-Date -Format 'yyyyMMdd_HHmm').log"
 
