@@ -9,7 +9,23 @@ $Destino = "\\$ComputadorDestino\C$\Backup_Migracao\$Usuario"
 $LogFile = "C:\Logs\Backup_$($Usuario)_$(Get-Date -Format 'yyyyMMdd_HHmm').log"
 
 # Garante que a pasta de logs local existe
+<#
+.SYNOPSIS
+Cria o diretório de logs se não existir.
+
+.DESCRIPTION
+Verifica se o caminho "C:\Logs" existe. Caso não exista, cria um novo diretório nesse caminho.
+A saída do comando New-Item é direcionada para Out-Null para suprimir mensagens de criação.
+
+.EXAMPLE
 if (!(Test-Path "C:\Logs")) { New-Item -ItemType Directory -Path "C:\Logs" | Out-Null }
+
+.NOTES
+- Test-Path: Testa se o caminho existe
+- !(): Operador NOT (negação lógica)
+- New-Item: Cria um novo item (neste caso, um diretório)
+- Out-Null: Descarta a saída do comando
+#>
 
 Write-Host "`nVerificando conexão com $ComputadorOrigem..." -ForegroundColor Cyan
 
