@@ -1,3 +1,8 @@
+# Pesquisa Binária em PowerShell
+# A pesquisa binária é um algoritmo eficiente para encontrar um elemento em uma lista ordenada.
+# Ele funciona dividindo repetidamente a lista em metades até encontrar o elemento desejado ou determinar que ele não está presente.
+# A lista deve estar ordenada para que a pesquisa binária funcione corretamente. 
+
 function Find-BinarySearch {
     [CmdletBinding()]
     param (
