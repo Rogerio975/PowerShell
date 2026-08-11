@@ -1,4 +1,4 @@
-function Dizer-Ola {
+function Write-Ola {
     param (
         [string]$Nome
     )
