@@ -1,0 +1,1 @@
+Write-Host "Olá, Mundo do PowerShell!"
