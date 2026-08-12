@@ -1,2 +1,2 @@
-"$PSScriptRoot\funcoes.ps1"
-Write-Ola -Nome "Alice"
+. "$PSScriptRoot\funcoes.ps1"
+Write-Ola -Nome "Júlia"
