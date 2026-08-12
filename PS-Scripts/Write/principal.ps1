@@ -1,2 +1,2 @@
-"$PSScriptRoot\funcoes.ps1"
-Write-Ola -Nome "Júlia"
+. "$PSScriptRoot\funcoes.ps1"
+Get-Ola -Nome "Júlia"
