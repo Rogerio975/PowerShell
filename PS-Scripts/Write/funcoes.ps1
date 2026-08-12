@@ -1,6 +1,6 @@
-function Write-Ola {
+function Get-Ola {
     param (
         [string]$Nome
     )
-    Write-Host "Olá, $Nome!"
+    return "Olá, $Nome!"
 }
