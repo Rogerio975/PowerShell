@@ -88,6 +88,7 @@ catch {
 finally {
     $stopwatch.Stop()
     Write-Log "Data de inicio: $startTime"
+    Write-Log "Data de termino: $(Get-Date)"
     Write-Log "Duracao total: $($stopwatch.Elapsed.ToString('hh\:mm\:ss\.fff'))"
 
     try {
