@@ -1,4 +1,6 @@
-Invoke-Command -ComputerName EMB5021071 -Credential (Get-Credential) -ScriptBlock {
+$ComputerName = Read-Host "Digite o nome ou IP do computador"
+
+Invoke-Command -ComputerName $ComputerName -Credential (Get-Credential) -ScriptBlock {
     $paths = @(
         "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*",
         "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"
