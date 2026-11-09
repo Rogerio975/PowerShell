@@ -11,4 +11,5 @@ Invoke-Command -ComputerName $ComputerName -Credential (Get-Credential) -ScriptB
     Sort-Object DisplayName
 }
 
-Write-Host "Programas instalados em $ComputerName."
+Write-Host "Programas instalados no computador $ComputerName."
+Write-Host "Script executado em $(Get-Date -Format 'dd/MM/yyyy HH:mm:ss')."
