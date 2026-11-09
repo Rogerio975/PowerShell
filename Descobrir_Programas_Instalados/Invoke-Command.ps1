@@ -10,3 +10,5 @@ Invoke-Command -ComputerName $ComputerName -Credential (Get-Credential) -ScriptB
     Select-Object DisplayName, DisplayVersion, Publisher | 
     Sort-Object DisplayName
 }
+
+Write-Host "Programas instalados em $ComputerName."
