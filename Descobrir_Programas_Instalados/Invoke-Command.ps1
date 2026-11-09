@@ -12,4 +12,4 @@ Invoke-Command -ComputerName $ComputerName -Credential (Get-Credential) -ScriptB
 }
 
 Write-Host "Programas instalados no computador $ComputerName."
-Write-Host "Script executado em $(Get-Date -Format 'dd/MM/yyyy HH:mm:ss')."
+Write-Host "Script executado em $(Get-Date -Format 'dd/MM/yyyy às HH:mm:ss')."
