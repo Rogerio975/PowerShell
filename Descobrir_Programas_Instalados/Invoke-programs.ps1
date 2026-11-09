@@ -15,10 +15,9 @@ $InstalledPrograms = Invoke-Command -ComputerName $ComputerName -Credential (Get
 } -ArgumentList $ProgramName
 
 if ($InstalledPrograms) {
-    $InstalledPrograms
+    Write-Host "O programa $ProgramName está instalado no computador $ComputerName."
 } else {
     Write-Host "O programa '$ProgramName' não foi localizado em $ComputerName." -ForegroundColor Yellow
 }
 
-Write-Host "Programa $ProgramName instalado no computador $ComputerName."
 Write-Host "Script executado em $(Get-Date -Format 'dd/MM/yyyy HH:mm:ss')."
