@@ -15,7 +15,7 @@ $InstalledPrograms = Invoke-Command -ComputerName $ComputerName -Credential (Get
 } -ArgumentList $ProgramName
 
 if ($InstalledPrograms) {
-    Write-Host "O programa $ProgramName está instalado no computador $ComputerName."
+    Write-Host "O programa $ProgramName está instalado no computador $ComputerName." -ForegroundColor Green
 } else {
     Write-Host "O programa '$ProgramName' não foi localizado em $ComputerName." -ForegroundColor Yellow
 }
