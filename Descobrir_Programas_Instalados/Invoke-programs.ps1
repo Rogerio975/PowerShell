@@ -1,7 +1,7 @@
 $ComputerName = Read-Host "Digite o nome ou IP do computador"
 $ProgramName = Read-Host "Digite o nome do programa que deseja procurar"
 
-Invoke-Command -ComputerName $ComputerName -Credential (Get-Credential) -ScriptBlock {
+$InstalledPrograms = Invoke-Command -ComputerName $ComputerName -Credential (Get-Credential) -ScriptBlock {
     param ($ProgramName)
 
     $paths = @(
@@ -14,5 +14,11 @@ Invoke-Command -ComputerName $ComputerName -Credential (Get-Credential) -ScriptB
     Sort-Object DisplayName
 } -ArgumentList $ProgramName
 
-Write-Host "Programas instalados no computador $ComputerName."
+if ($InstalledPrograms) {
+    $InstalledPrograms
+} else {
+    Write-Host "O programa '$ProgramName' não foi localizado em $ComputerName." -ForegroundColor Yellow
+}
+
+Write-Host "Programa $ProgramName instalado no computador $ComputerName."
 Write-Host "Script executado em $(Get-Date -Format 'dd/MM/yyyy HH:mm:ss')."
